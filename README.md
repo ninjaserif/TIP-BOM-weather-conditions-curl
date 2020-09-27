@@ -96,7 +96,10 @@ BOMURL="<URL>"               # URL to retrieve weather conditions
 * confirm scripts have execute permissions
   * TIP-BOM-weather-conditions-curl.sh should be executable
   * config.sh should be executable
+
 * you may also need to modify the permissions of both the script and config.sh to be owned by the telegraf user:group - i.e. `sudo chown telegraf:telegraf TIP-BOM-weather-conditions-curl.sh | sudo chown telegraf:telegraf config.sh`
+
+* you may also need to modify the permissions of the directory the script and config.sh are stored to be  - i.e. `sudo chmod 774 /usr/local/bin/TIP-BOM-weather-conditions-curl`
 
 * add the following to your telegraf.conf
 
@@ -116,5 +119,7 @@ BOMURL="<URL>"               # URL to retrieve weather conditions
 * 1.0.0 19-09-2020
   * cleaned up for git - set to version 1.0.0
   * use config and location for reference
+* 1.0.1 27-09-2020
+  * updated README instructions to include setting folder permissions following first deployment / test
 
 ## -END-
